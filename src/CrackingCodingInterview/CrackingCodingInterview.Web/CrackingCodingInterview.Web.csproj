@@ -8,4 +8,9 @@
   <ItemGroup>
     <Folder Include="Controllers\v1\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CrackingCodingInterview.Core\CrackingCodingInterview.Core.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
