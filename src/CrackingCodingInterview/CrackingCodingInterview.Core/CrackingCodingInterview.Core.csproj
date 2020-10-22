@@ -10,5 +10,8 @@
     <Folder Include="Models\Common\" />
     <Folder Include="Models\API\" />
     <Folder Include="Models\Common\API\" />
+    <Folder Include="Models\API\Strings\" />
+    <Folder Include="Models\API\Strings\Requests\" />
+    <Folder Include="Models\API\Strings\Responses\" />
   </ItemGroup>
 </Project>
