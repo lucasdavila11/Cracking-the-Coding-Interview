@@ -5,9 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="API\" />
-    <Folder Include="Common\" />
-    <Folder Include="Core\" />
-    <Folder Include="Core\Trees\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Strings\" />
+    <Folder Include="Services\Arrays\" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CrackingCodingInterview.Core\CrackingCodingInterview.Core.csproj" />
+    <ProjectReference Include="..\CrackingCodingInterview.Service\CrackingCodingInterview.Service.csproj" />
+  </ItemGroup>
+</Project>

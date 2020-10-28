@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using CrackingCodingInterview.Core.API.Strings.Requests;
 using CrackingCodingInterview.Core.API.Strings.Responses;
 using CrackingCodingInterview.Core.Common;
+using CrackingCodingInterview.Services.Strings;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -28,7 +29,7 @@ namespace CrackingCodingInterview.Web.Controllers.v1
             var stringResponse = new ReverseStringResponse()
             {
                 Original = request.Reverse,
-                Reversed = request.Reverse
+                Reversed = request.Reverse.ReverseString()
             };
 
             response.Result = stringResponse;

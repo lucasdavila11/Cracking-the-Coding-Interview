@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrackingCodingInterview.Web
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrackingCodingInterview.Core", "CrackingCodingInterview.Core\CrackingCodingInterview.Core.csproj", "{0B9B96E1-0AE4-4B3B-A3ED-2F7616681C26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrackingCodingInterview.Service", "CrackingCodingInterview.Service\CrackingCodingInterview.Service.csproj", "{1E882DC1-EF8C-43CC-828A-A3592FC19DA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrackingCodingInterview.Console", "CrackingCodingInterview.Console\CrackingCodingInterview.Console.csproj", "{CCF23A0A-8FF9-4BBA-93E1-5FDEF39B0B95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +23,13 @@ Global
 		{0B9B96E1-0AE4-4B3B-A3ED-2F7616681C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B9B96E1-0AE4-4B3B-A3ED-2F7616681C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B9B96E1-0AE4-4B3B-A3ED-2F7616681C26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E882DC1-EF8C-43CC-828A-A3592FC19DA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E882DC1-EF8C-43CC-828A-A3592FC19DA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E882DC1-EF8C-43CC-828A-A3592FC19DA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E882DC1-EF8C-43CC-828A-A3592FC19DA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCF23A0A-8FF9-4BBA-93E1-5FDEF39B0B95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF23A0A-8FF9-4BBA-93E1-5FDEF39B0B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF23A0A-8FF9-4BBA-93E1-5FDEF39B0B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF23A0A-8FF9-4BBA-93E1-5FDEF39B0B95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

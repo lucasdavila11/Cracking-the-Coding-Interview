@@ -12,5 +12,8 @@
     <ProjectReference Include="..\CrackingCodingInterview.Core\CrackingCodingInterview.Core.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\CrackingCodingInterview.Service\CrackingCodingInterview.Service.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>
