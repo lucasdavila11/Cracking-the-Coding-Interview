@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using CrackingCodingInterview.Service.Services.Matrices;
 using CrackingCodingInterview.Services.Arrays;
+using CrackingCodingInterview.Services.Lists;
 using CrackingCodingInterview.Services.Strings;
 
 namespace CrackingCodingInterview
@@ -9,13 +12,17 @@ namespace CrackingCodingInterview
         static void Main(string[] args)
         {
             //in progress
-            StringQuestions.LongestPalindrom();
+
+            ListQuestions.MergeKSortedLists();
+
 
             //complete
+            //MatricesQuestions.SprialMatrix();
             //StringQuestions.ValidParenthesis();
             //Arrays.TargetNum();
             //Arrays.FindWord();
-
+            //StringQuestions.LongestPalindrom();
+            //MatricesQuestions.FindIslands();
             //todo
             //Arrays.SmallestMissingInt();
         }
@@ -134,6 +141,107 @@ Your algorithm should run in O(n) time and uses constant extra space.");
             var solution = ArrayService.FindSmallestMissingNumber(array1);
             Console.WriteLine("array: [{0}]", string.Join(", ", array1));
             Console.WriteLine("answer: {0}", solution);
+        }
+    }
+
+    public static class MatricesQuestions
+    {
+        /// <summary>
+        /// COMPLETE
+        /// </summary>
+        public static void SprialMatrix()
+        {
+            Console.WriteLine(@"
+Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
+");
+
+            var matrix = new int[][] {
+                new int[]{1,2,3,4,5,6 },
+                new int[]{4,5,6,7,5,6},
+                new int[]{7,8,9,10,3,0},
+                new int[]{7,8,9,10,3,0},
+                new int[]{7,8,9,10,3,0}
+            };
+
+
+            Console.WriteLine(@" matrix:
+[
+    [{0}]
+    [{1}]
+    [{2}]
+    [{3}]
+    [{4}]
+]
+", string.Join(", ", matrix[0]), string.Join(", ", matrix[1]), string.Join(", ", matrix[2]), string.Join(", ", matrix[3]), string.Join(", ", matrix[4]));
+
+            Console.WriteLine("answer: [{0}]", string.Join(", ", matrix.SpiralMatrix()));
+        }
+
+
+        public static void FindIslands()
+        {
+            Console.WriteLine("Given a M x N Matrix, find the number of islands.");
+
+            var matrix = new int[][] {
+                new int[]{1,1,1,0,0,0 },
+                new int[]{1,1,0,0,0,0},
+                new int[]{1,0,0,0,1,0},
+                new int[]{0,0,0,1,1,0},
+                new int[]{1,1,0,0,0,0}
+            };
+
+
+            Console.WriteLine(@" matrix map:
+[
+    [{0}]
+    [{1}]
+    [{2}]
+    [{3}]
+    [{4}]
+]
+", string.Join(", ", matrix[0]), string.Join(", ", matrix[1]), string.Join(", ", matrix[2]), string.Join(", ", matrix[3]), string.Join(", ", matrix[4]));
+
+
+            Console.WriteLine("islands: {0}", matrix.FindIslands());
+        }
+
+    }
+
+    public static class TreeQuestions
+    {
+
+    }
+
+    public static class ListQuestions
+    {
+        public static void MergeKSortedLists()
+        {
+            Console.WriteLine(@"
+
+You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+
+Merge all the linked-lists into one sorted linked-list and return it.
+
+");
+
+            var lists = new List<List<int>>()
+            {
+                new List<int>() {1, 2, 4, 6, 8},
+                new List<int>() {1, 2, 4},
+                new List<int>() {3, 4, 5, 6, 6, 7},
+                new List<int>() {0, 0, 0, 0, 1, 1, 1, 1, 1}
+            };
+
+            Console.WriteLine("[");
+            foreach(var l in lists)
+            {
+                Console.WriteLine("\t{0}", string.Join("->", l));
+            }
+            Console.WriteLine("]");
+
+            var mergedList = ListService.MergeKSortedLists(lists);
+
+            Console.WriteLine("answer: {0}", string.Join("->", mergedList));
         }
     }
 }

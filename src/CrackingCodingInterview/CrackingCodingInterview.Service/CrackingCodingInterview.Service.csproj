@@ -8,5 +8,7 @@
     <Folder Include="Services\" />
     <Folder Include="Services\Strings\" />
     <Folder Include="Services\Arrays\" />
+    <Folder Include="Services\Matrices\" />
+    <Folder Include="Services\Lists\" />
   </ItemGroup>
 </Project>

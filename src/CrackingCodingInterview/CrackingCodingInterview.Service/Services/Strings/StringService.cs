@@ -117,42 +117,42 @@ namespace CrackingCodingInterview.Services.Strings
             return palindrome;
         }
 
-        private static bool FindPalindrome(string s, int left, int right)
-        {
-            if (s.Length == 1)
-            {
-                return true;
-            }
-            else if(s.Length == 2)
-            {
-                if (s[0] == s[1])
-                {
-                    return true;
-                }
-            }
-            else if(s.Length == 3)
-            {
-                if (s[0] == s[2])
-                {
-                    return true;
-                }
-            }
+        //private static bool FindPalindrome(string s, int left, int right)
+        //{
+        //    if (s.Length == 1)
+        //    {
+        //        return true;
+        //    }
+        //    else if(s.Length == 2)
+        //    {
+        //        if (s[0] == s[1])
+        //        {
+        //            return true;
+        //        }
+        //    }
+        //    else if(s.Length == 3)
+        //    {
+        //        if (s[0] == s[2])
+        //        {
+        //            return true;
+        //        }
+        //    }
 
-            var left = 0;
-            var right = s.Length;
-            while (left < right)
-            {
-                if (s[left] != s[right])
-                {
-                    return false;
-                }
-                left++;
-                right--;
-            }
+        //    var left = 0;
+        //    var right = s.Length;
+        //    while (left < right)
+        //    {
+        //        if (s[left] != s[right])
+        //        {
+        //            return false;
+        //        }
+        //        left++;
+        //        right--;
+        //    }
 
-            return true;
+        //    return true;
 
-        }
+        //}
 
 
     }
