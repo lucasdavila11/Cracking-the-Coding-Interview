@@ -91,6 +91,33 @@ namespace CrackingCodingInterview.Services.Arrays
 
 
 
+        #region Can Jump
+        public static int CanReach(int[] A, int N)
+        {
+
+            if(N == 1)
+            {
+                return 1;
+            }
+
+            return CanReachDFS(A, 0, A[0], N);
+        }
+
+        private static int CanReachDFS(int[] A, int index, int jump, int size)
+        {
+            if(index >= size - 1)
+            {
+                return 1;
+            }
+
+            for(int i = jump; i >= 0; i--)
+            {
+                CanReachDFS(A, index + i, A[index + i], size);
+            }
+
+            return 0;
+        }
+        #endregion
 
 
 

@@ -13,7 +13,8 @@ namespace CrackingCodingInterview
         {
             //in progress
 
-            ListQuestions.MergeKSortedLists();
+            Arrays.JumpGame();
+            //ListQuestions.MergeKSortedLists();
 
 
             //complete
@@ -23,10 +24,24 @@ namespace CrackingCodingInterview
             //Arrays.FindWord();
             //StringQuestions.LongestPalindrom();
             //MatricesQuestions.FindIslands();
+            //StringQuestions.LongestSubstringUniqueCharacters();
             //todo
             //Arrays.SmallestMissingInt();
+
+
         }
+
     }
+
+
+
+
+
+
+
+
+
+
 
     public static class StringQuestions
     {
@@ -81,6 +96,22 @@ Given a string s, return the longest palindromic substring in s.
             Console.WriteLine("answer: {0}\n", test3.LongestPalindrom());
         }
 
+        public static void LongestSubstringUniqueCharacters()
+        {
+            var test = "abcabcbb";
+            var test1 = "aaaaaaaaaaabcds";
+            var test2 = "abcdefghijkkabcdefghijklmno";
+
+            Console.WriteLine("Find longest substring in string: {0}", test);
+            Console.WriteLine("Answer: {0}", test.LengthOfLongestSubstring());
+
+            Console.WriteLine("Find longest substring in string: {0}", test1);
+            Console.WriteLine("Answer: {0}", test1.LengthOfLongestSubstring());
+
+            Console.WriteLine("Find longest substring in string: {0}", test2);
+            Console.WriteLine("Answer: {0}", test2.LengthOfLongestSubstring());
+        }
+
     }
 
     public static class Arrays
@@ -100,6 +131,16 @@ You may assume that each input would have exactly one solution, and you may not 
             var solution = ArrayService.FindTwoSum(array1, target);
             Console.WriteLine("target: {0}\narray: [{1}]", target, string.Join(", ",array1));
             Console.WriteLine("answer: [ {0}, {1} ]", solution?[0], solution?[1]);
+
+        }
+
+        public static void JumpGame()
+        {
+            var n = 6;
+            var jump = new int[] { 1, 2, 0, 3, 0, 0 };
+
+            Console.WriteLine("jump: [{0}]", string.Join(", ", jump));
+            Console.WriteLine("Can Jump: {0}", ArrayService.CanReach(jump, n));
 
         }
 

@@ -2,6 +2,7 @@
 using System.Text;
 using System.Linq;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace CrackingCodingInterview.Services.Strings
 {
@@ -153,6 +154,39 @@ namespace CrackingCodingInterview.Services.Strings
         //    return true;
 
         //}
+
+        public static int LengthOfLongestSubstring(this string s)
+        {
+
+            var max = 0;
+
+            DFS(s, 0, ref max, "");
+
+            return max;
+
+        }
+
+        private static void DFS(string s, int index, ref int max, string substring)
+        {
+            if (!isUnique(substring))
+            {
+                return;
+            }
+
+            var current = substring.Length;
+            max = current > max ? current : max;
+
+            for (int i = index; i < s.Length; i++)
+            {
+                DFS(s, i + 1, ref max, substring + s[i]);
+            }
+        }
+
+        private static bool isUnique(string s)
+        {
+            var charSet = new HashSet<char>(s);
+            return charSet.Count == s.Length;
+        }
 
 
     }
